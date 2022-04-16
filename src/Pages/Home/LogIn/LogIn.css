@@ -1,0 +1,33 @@
+
+.google-btn {
+    height: 50px;
+    background-color: rgb(55, 118, 173);
+    color:white ;
+    font-size: x-large;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.google-btn:hover{
+    background-color:rgb(32, 77, 116) ;
+}
+
+
+
+.login-btn {
+    height: 50px;
+    background-color: rgb(117, 182, 53);
+    color: aliceblue;
+    font-size: x-large;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+}
+
+.login-btn:hover {
+    color: aliceblue;
+    background-color: darkgreen;
+}
+
