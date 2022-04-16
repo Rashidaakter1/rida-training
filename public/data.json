@@ -1,0 +1,52 @@
+[
+    {
+        
+       
+        "id":1,
+        "name":"RAMADAN SPECIAL",
+        "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
+        "price":"",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
+
+    },
+    {
+        "id":2,
+        "name":"8-WEEKS PLAN - FAT LOSS (BEGINNER'S)",
+        "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
+        "price":"",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
+
+    },
+    {
+        "id":3,
+        "name":"8-WEEKS PLAN - INTERMEDIATATE FAT LOSS",
+        "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
+        "price":"",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
+
+    },
+    {
+        "id":4,
+        "name":"8-WEEKS PLAN -INTERMEDIATATE RAPID FAT LOSS",
+        "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
+        "price":"",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
+
+    },
+    {
+        "id":5,
+        "name":"8-WEEKS PLAN -BODYWEIGHT BODYBUILDING",
+        "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
+        "price":"",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
+
+    },
+    {
+        "id":6,
+        "name":"BASIC FAT BURNING",
+        "img":" https://i.ibb.co/TwD3bg3/cardio.png",
+        "price":"",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
+
+    }
+]
