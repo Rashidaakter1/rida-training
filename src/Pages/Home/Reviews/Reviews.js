@@ -4,11 +4,9 @@ import Review from '../Review/Review';
 const Reviews = () => {
     const reviewsData = [
         {
-
-
             "id": 1,
-            "name": "Rashida Akter",
-            "img": "https://i.ibb.co/jRGcDVx/weight-train.png",
+            "name": "Rida Akter",
+            "img": "https://i.ibb.co/5L8nZKc/review-3.png",
 
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
 
@@ -16,15 +14,15 @@ const Reviews = () => {
         {
             "id": 2,
             "name": "Adam Smith",
-            "img": "https://i.ibb.co/jRGcDVx/weight-train.png",
+            "img": "https://i.ibb.co/yVKkNPL/review-2.png",
 
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
 
         },
         {
             "id": 3,
-            "name": "Sara Mehjabin",
-            "img": "https://i.ibb.co/jRGcDVx/weight-train.png",
+            "name": "Eren Jagear",
+            "img": "https://i.ibb.co/g9QVPjh/review-1.png",
 
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
 
