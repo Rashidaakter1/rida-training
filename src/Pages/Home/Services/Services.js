@@ -10,7 +10,7 @@ const Services = () => {
     },[])
     return (
         <div className=''>
-            <h1 className='py-2 mt-4 mb-2 text-center'>IN-HOME, ONSITE, AND VIRTUAL</h1>
+            <h1 className='py-2 mt-4 mb-2 text-center'>IN-HOME, ONSITE, AND VIRTUAL SERVICES</h1>
             <p className='mt-2 mb-2 text-center'>Are you looking for the perfect workout for you? Discover our full range of in-home and on-site health and wellness services.</p>
             <div className="container">
                 

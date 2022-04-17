@@ -1,17 +1,56 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const Signup = () => {
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+
     const navigate =useNavigate();
 
     const handleLogin=()=>{
         navigate('/login')
     }
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+
+
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    if (error) {
+      
+        return (
+          <div>
+            <p>Error: {error.message}</p>
+          </div>
+        );
+      }
+
+    if(googleUser||user){
+        navigate('/')
+    }
+    if(googleLoading||loading){
+        <p>Loading...</p>;
+    }
+
+    const handleSignup=(event)=>{
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+        
+        createUserWithEmailAndPassword(email,password)
+    }
 
     return (
         <div className='container '>
-            <Form className='mt-4 border m-4 p-4 rounded mx-auto w-50'>
+            <Form onSubmit={handleSignup} className='mt-4 border m-4 p-4 rounded mx-auto w-50'>
                
                 <h2 className='fs-1 text-center mb-4'>Create account </h2>
 
@@ -21,7 +60,7 @@ const Signup = () => {
 
                         <img className='' style={{ height: '35px' }} src="https://i.ibb.co/ZTdGcNf/google-logo.webp" alt="" />
 
-                        <div><span className='ms-3'>Continue With Google</span></div>
+                        <div><span onClick={()=>signInWithGoogle()} className='ms-3'>Continue With Google</span></div>
                     </div>
                 </button>
 
@@ -41,13 +80,13 @@ const Signup = () => {
                         </div>
                     </div>
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control className='py-2' type="email" placeholder="Enter email" required />
+                    <Form.Control ref={emailRef} className='py-2' type="email" placeholder="Enter email" required />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control className='py-2' type="password" placeholder="Password" />
+                    <Form.Control ref={passwordRef} className='py-2' type="password" placeholder="Password" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Confirm Password</Form.Label>

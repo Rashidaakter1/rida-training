@@ -1,15 +1,8 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import {  Card } from 'react-bootstrap';
 
-const Service = ({ service }) => {
-
-    const { name, img, description, price } = service
-    const navigate=useNavigate()
-
-    const handleCheckout=()=>{
-        navigate('/checkout')
-    }
+const Review = ({review}) => {
+    const {img,name,description}=review
     return (
         <div className='col-lg-4 col-sm-12 col-md-6'>
             <Card style={{ width: '18rem' }}>
@@ -19,11 +12,11 @@ const Service = ({ service }) => {
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <Button onClick={handleCheckout} variant="primary">Check Out Now</Button>
+                    
                 </Card.Body>
             </Card>
         </div>
     );
 };
 
-export default Service;
+export default Review;
