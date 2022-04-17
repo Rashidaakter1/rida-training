@@ -25,7 +25,7 @@ const Signup = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
     if (error) {
-      
+       
         return (
           <div>
             <p>Error: {error.message}</p>
