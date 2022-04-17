@@ -2,9 +2,10 @@ import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import {  useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import {  useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 
 import './LogIn.css'
+import Loading from '../../Shared/Loading/Loading';
 
 const LogIn = () => {
 
@@ -18,13 +19,6 @@ const LogIn = () => {
 
 
 
-    // const [
-    //     createUserWithEmailAndPassword,
-    //     user,
-    //     loading,
-    //     error,
-    // ] = useCreateUserWithEmailAndPassword(auth);
-
     const [
         signInWithEmailAndPassword,
         emailUser,
@@ -33,7 +27,9 @@ const LogIn = () => {
         
     ] = useSignInWithEmailAndPassword(auth);
 
-
+    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(
+        auth
+      );
 
     const handleSignup = () => {
         navigate('/signup')
@@ -47,7 +43,7 @@ const LogIn = () => {
 
     }
     if (googleLoading || emailLoading) {
-        return <p>Loading...</p>;
+        <Loading></Loading>
     }
 
     const from = location.state?.from?.pathname || "/";
@@ -65,10 +61,18 @@ const LogIn = () => {
         signInWithEmailAndPassword(email,password)
 
     }
+    const handleResetPassword= async ()=>{
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        
+        alert('Sent email');
+
+       
+    }
     return (
         <div className='container '>
             <Form onSubmit={handleLogin} className='mt-4 border m-4 p-4 rounded mx-auto w-50'>
-                <h1></h1>
+               
                 <h2 className='fs-1 text-center mb-4'> Have we met before? </h2>
                 <p className='fs-5 text-center mb-4'>Great to see you here! Just one step before
                     we take you to checkout.</p>
@@ -108,6 +112,10 @@ const LogIn = () => {
                     <p>New here ?
                         <button onClick={handleSignup} className='btn btn-link text-info'
                         >Create new account</button>
+                    </p>
+                    <p>Forget password ?
+                        <button onClick={handleResetPassword} className='btn btn-link text-info'
+                        >Reset password</button>
                     </p>
                 </div>
 

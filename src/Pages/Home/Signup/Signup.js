@@ -1,8 +1,10 @@
+import { updateProfile } from 'firebase/auth';
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const Signup = () => {
     const emailRef = useRef('');
@@ -13,6 +15,7 @@ const Signup = () => {
     const handleLogin=()=>{
         navigate('/login')
     }
+    
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
 
@@ -22,22 +25,23 @@ const Signup = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
-
-    if (error) {
+    ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
+    let errorElment;
+    if (error||googleError) {
        
-        return (
+        errorElment=
           <div>
-            <p>Error: {error.message}</p>
+            <p>Error: {error?.message}{googleError?.message}</p>
           </div>
-        );
+          
+       
       }
 
     if(googleUser||user){
-        navigate('/')
+        navigate('/home')
     }
     if(googleLoading||loading){
-        <p>Loading...</p>;
+        <Loading></Loading>
     }
 
     const handleSignup=(event)=>{
@@ -46,6 +50,8 @@ const Signup = () => {
         const password = passwordRef.current.value;
         
         createUserWithEmailAndPassword(email,password)
+        
+        alert('Sent email');
     }
 
     return (
@@ -86,20 +92,20 @@ const Signup = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRef} className='py-2' type="password" placeholder="Password" />
+                    <Form.Control ref={passwordRef} className='py-2' type="password" placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Confirm Password</Form.Label>
-                    <Form.Control className='py-2' type="password" placeholder="Confirm Password" />
+                    <Form.Control className='py-2' type="password" placeholder="Confirm Password" required />
                 </Form.Group>
 
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
                         <label className="form-check-label" for="flexCheckDefault">
-                          Agree to tems and conditions
+                          Agree to the terms and conditions
                         </label>
                 </div>
-
+                    <p>{errorElment}</p>
                 <button className='login-btn w-100 mt-4' type="login"
                 >Sign up</button>
 

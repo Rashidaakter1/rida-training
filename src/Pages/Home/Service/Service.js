@@ -19,6 +19,9 @@ const Service = ({ service }) => {
                     <Card.Text>
                         {description}
                     </Card.Text>
+                    <Card.Text className='text-secondary fs-5 fw-bold'>
+                       Price :Tk.{price}
+                    </Card.Text>
                     <button  onClick={handleCheckout} className='login-btn fs-6 px-2'>Check Me Out</button>
                 </Card.Body>
             </Card>

@@ -5,7 +5,7 @@
         "id":1,
         "name":"RAMADAN SPECIAL",
         "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
-        "price":"",
+        "price":"2000",
         "description":"In Ramadan you have to stay Hydrated and filled with nutritient.There we just do cardio , running , cycling and so on. Not Intermediatate level ."
 
     },
@@ -13,7 +13,7 @@
         "id":2,
         "name":"8-WEEKS PLAN - FAT LOSS (BEGINNER'S)",
         "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
-        "price":"",
+        "price":"3000",
         "description":"Start the new year strong, lean, and fierce with 8-weeks of curated demanding workouts programmed to challenge your entire body. In as little as 8 weeks, you’ll start to feel a positive shift in your muscular strength and endurance as well as in your mindset"
 
     },
@@ -21,7 +21,7 @@
         "id":3,
         "name":"8-WEEKS PLAN - INTERMEDIATATE FAT LOSS",
         "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
-        "price":"",
+        "price":"4000",
         "description":"Start the new year strong, lean, and fierce with 8-weeks of curated demanding workouts programmed to challenge your entire body.In this 8-weeks plan you have build your muscles if you are dedicated"
 
     },
@@ -29,7 +29,7 @@
         "id":4,
         "name":"8-WEEKS PLAN -INTERMEDIATATE RAPID FAT LOSS",
         "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
-        "price":"",
+        "price":"5000",
         "description":"Start the new year strong, lean, and fierce with 8-weeks of curated demanding workouts programmed to challenge your entire body.In this 8-weeks plan you have lost your stubborn fat from your belly if you are dedicated"
 
     },
@@ -37,7 +37,7 @@
         "id":5,
         "name":"8-WEEKS PLAN -BODYWEIGHT BODYBUILDING",
         "img":"https://i.ibb.co/jRGcDVx/weight-train.png",
-        "price":"",
+        "price":"5000",
         "description":"Start the new year strong, lean, and fierce with 8-weeks of curated demanding workouts programmed to challenge your entire body.In this 8-weeks plan you have build your muscles if you are dedicated"
 
     },
@@ -45,7 +45,7 @@
         "id":6,
         "name":"BASIC FAT BURNING",
         "img":" https://i.ibb.co/TwD3bg3/cardio.png",
-        "price":"",
+        "price":"3000",
         "description":"It's the begining of your journey to us.Stay hydrated . we have to do lots of cardio , beginner's level cardio,so don't worry.you will not tired"
 
     }
