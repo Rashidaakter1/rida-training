@@ -5,10 +5,10 @@ const Reviews = () => {
     const reviewsData = [
         {
             "id": 1,
-            "name": "Rida Akter",
+            "name": "Mikasa ",
             "img": "https://i.ibb.co/5L8nZKc/review-3.png",
 
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
+            "description": "Rida's Training and Fitness always delivers a challenging workout that will renew confidence in your body. Little equipment needed, challenging movements, keeps me on my toes. "
 
         },
         {
@@ -16,7 +16,7 @@ const Reviews = () => {
             "name": "Adam Smith",
             "img": "https://i.ibb.co/yVKkNPL/review-2.png",
 
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
+            "description": "I look forward to every workout. During the lockdown I was so happy I was introduced to Rida, and as a stay at home mom I'm so thankful that I could train with her from the comfort of my own home."
 
         },
         {
@@ -24,7 +24,7 @@ const Reviews = () => {
             "name": "Eren Jagear",
             "img": "https://i.ibb.co/g9QVPjh/review-1.png",
 
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore perferendis ipsa voluptatum alias, nisi quia a consequuntur mollitia autem."
+            "description": "At first I was hesitant as I thought the workouts were only geared towards women. After 7 months of consistent training, I have become fitter and felt better. Thank you Rida."
 
         },
     ]

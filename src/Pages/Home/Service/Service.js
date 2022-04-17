@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const Service = ({ service }) => {
@@ -19,7 +19,7 @@ const Service = ({ service }) => {
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <Button onClick={handleCheckout} variant="primary">Check Out Now</Button>
+                    <button  onClick={handleCheckout} className='login-btn fs-6 px-2'>Check Me Out</button>
                 </Card.Body>
             </Card>
         </div>
