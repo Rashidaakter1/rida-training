@@ -5,8 +5,8 @@ Here the live website link [Rida's Training and Fitness](https://rida-training-f
 ## `website Features and Functionality `
 
 * ### Home page
-   1.Services 
-     * here you find some services which we provide
+   1.Services  
+     * here you find some services which we provide \
    2.Reviews  
      * some reviews from people who was connected with us
 * ### Login page which can be toggled to Signup Page.
