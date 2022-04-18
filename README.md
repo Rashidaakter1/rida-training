@@ -1,17 +1,19 @@
 # Rida's Training and Fitness
 
-Here the live website link [Rida's Training and Fitness](https://github.com/facebook/create-react-app).
+Here the live website link [Rida's Training and Fitness](https://rida-training-fitness.web.app/).
 
-## website Features and Functionality 
+## `website Features and Functionality `
 
-* ## Home page
+* ### Home page
    1.Services 
-     here you find some services which we provide
+     * here you find some services which we provide
    2.Reviews  
-     some reviews from people who was connected with us
-* ## Login page which can be toggled to Signup Page.
-* ## About me  page , here I am describing my goals.
-* ## Blogs page , here are some question answer will be found
+     * some reviews from people who was connected with us
+* ### Login page which can be toggled to Signup Page.
+* ### About me  page 
+    * here I am describing my goals.
+* ### Blogs page 
+    * here are some question answer will be found
 
 
 ### `A list of technologies (frameworks, libraries) used in this project.`
