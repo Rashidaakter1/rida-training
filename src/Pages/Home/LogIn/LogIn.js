@@ -6,6 +6,8 @@ import {  useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWit
 
 import './LogIn.css'
 import Loading from '../../Shared/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LogIn = () => {
 
@@ -63,11 +65,15 @@ const LogIn = () => {
     }
     const handleResetPassword= async ()=>{
         const email = emailRef.current.value;
+       if(email){
         await sendPasswordResetEmail(email);
-        
-        alert('Sent email');
+        toast('Sent email');
+       }
 
-       
+       else{
+        toast('Please enter your email')
+       }
+      
     }
     return (
         <div className='container '>
@@ -118,7 +124,7 @@ const LogIn = () => {
                         >Reset password</button>
                     </p>
                 </div>
-
+            <ToastContainer></ToastContainer>
             </Form>
         </div>
     );
