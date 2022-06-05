@@ -76,7 +76,7 @@ const LogIn = () => {
       
     }
     return (
-        <div className='container '>
+        <div style={{'height':'100vh'}} className='container'>
             <Form onSubmit={handleLogin} className='mt-4 border m-4 p-4 rounded mx-auto w-50'>
                
                 <h2 className='fs-1 text-center mb-4'> Have we met before? </h2>
